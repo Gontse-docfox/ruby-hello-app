@@ -8,6 +8,9 @@ default: &default
   cache_path: tmp/cache/webpacker
   check_yarn_integrity: false
   webpack_compile_output: true
+  
+  heroku buildpacks:add --index 1 heroku/nodejs
+  heroku buildpacks:add --index 2 heroku/ruby
 
   # Additional paths webpack should lookup modules
   # ['app/assets', 'engine/foo/app/assets']
